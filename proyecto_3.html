@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>difurcacion_anidada</title>
+
+</head>
+<body>
+    <h2>Sistema_Multimedia</h2>
+    <form name="paco">
+        ingrese su nombre: <input name="nom" value="0"> <br><br>
+        ingrese el paralelo: <input name="par" value="0"> <br><br>
+        ingrese su jornada: <input name="jor" value="0"> <br><br>
+        Primer parcial: <input name="Pp" value="0"> <br><br>
+        Segundo parcial: <input name="Sp" value="0"> <br><br>
+
+
+        <script>
+            function proceso(){
+                var Pp = parseFloat(document.paco.Pp.value);
+                var Sp = parseFloat(document.paco.Sp.value);
+                var suma = Pp + Sp
+
+                document.paco.su.value = suma;
+                            
+                if (suma >= 14) {
+                document.paco.men.value = "Aprobado";
+                } else if (suma >= 10) {
+                document.paco.men.value = "Suspenso";
+                } else {
+                document.paco.men.value = "Reprobado";
+                }
+            }
+        </script>  
+
+        <input type="button" name="boton" value="calcular" onclick="proceso()"> <br><br>
+        La suma es : <input name="su" value="0" size="5"> <br><br>
+        Usted esta : <input name="men" value="0" size="0"> <br><br>
+        <input type="reset" value="limpiar"> <br><br>
+    </form>
+    
+</body>
+</html>

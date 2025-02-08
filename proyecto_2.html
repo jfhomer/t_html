@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bifurcacion_2</title>
+
+</head>
+<body>
+    <h1>Comparacion de Numeros</h1>
+    <form name="jared">
+        primer numero = <input name ="pn" value="0"> <br><br>
+        segundo numero = <input name ="sn" value="0"> <br><br>
+    <script>
+        function proceso() {
+            var pn = parseFloat(document.jared.pm.value);
+            var sn = parseFloat(document.jared.sn.value);
+        if (pn > sn) {
+            document.jared.ns.value = "el mayor es" + pn;
+        } else {
+            document.jared.ns.value = "el mayor es" + sn;
+        }
+    }
+    </script> 
+
+    <input type="button" name="boton" value="calcular" onclick="proceso()"> <br><br>
+    el numero mayor es : <input name="ns" value="0"> <br><br>
+    <input type="reset" value="limpiar"> <br><br>
+
+    </form>
+    
+</body>
+</html>

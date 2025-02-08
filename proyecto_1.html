@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ejercicio_de_bifurcacion_#2</title>
+</head>
+<body>
+    <h1>Bifurcacion</h1>
+    <form name="calculo">
+        Ingrese precio: <input name="pre" value="0"> <br><br>
+        Ingrese cantidad: <input name="can" value="0"> <br><br>
+        Ingrese edad: <input name="eda" value="0"> <br><br>
+        
+        <script>
+            function calcula() {
+                var pre = parseFloat(document.calculo.pre.value);
+                var can = parseFloat(document.calculo.can.value);
+                var eda = parseFloat(document.calculo.eda.value);
+                
+                if (eda >= 65) {
+                    document.calculo.tp.value = (pre * can) / 2;
+                } else {
+                    document.calculo.tp.value = pre * can;
+                }
+            }
+        </script>
+
+        <input type="button" name="boton" value="calcular" onclick="calcula()"><br><br>
+        El total a pagar es: <input name="tp" value="0"> <br><br>
+        <input type="reset" value="limpiar"> <br><br>
+    </form>
+</body>
+</html>
